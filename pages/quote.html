@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><h1>Secure Car</h1></a>
+        <nav>
+            <ul class="menu">
+                <div><a href="./services.html"><li>Services</li></a></div>
+                <div><a href="./about-us.html"><li>About us</li></a></div>
+                <div><a href="./contact.html"><li>Contact</li></a></div>
+                <div><a href="./sign-in.html"><li>Sign-out</li></a></div>
+            </ul>
+        </nav>
+    </header>
+    <form id="quote-form">
+        <div class="block-information">
+            <p class="title-data">Data Car</p>
+            <p class="title-chooseBrand">Choose a brand</p>
+            <div class="chooseBrand-container">
+                <input type="radio" name="brands" id="brandChoose1" value="volkswagen">
+                <label for="brandChoose1"><img src="../img/brands/brand_volkswagen.png" alt="volkswagen"></label>
+                <input type="radio" name="brands" id="brandChoose2" value="toyota">
+                <label for="brandChoose2"><img src="../img/brands/brand_toyota.png" alt="toyota"></label>
+                <input type="radio" name="brands" id="brandChoose3" value="renault">
+                <label for="brandChoose3"><img src="../img/brands/brand_renault.png" alt="renault"></label>
+                <input type="radio" name="brands" id="brandChoose4" value="ford">
+                <label for="brandChoose4"><img src="../img/brands/brand_ford.png" alt="ford"></label>
+                <input type="radio" name="brands" id="brandChoose5" value="fiat">
+                <label for="brandChoose5"><img src="../img/brands/brand_fiat.png" alt="fiat"></label>
+            </div>
+            <p class="title-chooseModel">Choose a model</p>
+            <div class="chooseModel-container">
+                <input type="radio" name="models" id="modelChoose1" value=" ">
+                <label for="modelChoose1"><img src="" alt=""></label>
+                <input type="radio" name="models" id="modelChoose2" value=" ">
+                <label for="modelChoose2"><img src="" alt=""></label>
+                <input type="radio" name="models" id="modelChoose3" value=" ">
+                <label for="modelChoose3"><img src="" alt=""></label>
+                <input type="radio" name="models" id="modelChoose4" value=" ">
+                <label for="modelChoose4"><img src="" alt=""></label>
+                <input type="radio" name="models" id="modelChoose5" value=" ">
+                <label for="modelChoose5"><img src="" alt=""></label>
+            </div>
+            <div class="dataCar-item">
+                <label for="yearManufacture" class="title-DataCar">Year of Manufacture</label>
+                <input type="number" class="input-form" id="yearManufacture">
+            </div>
+            <div class="dataCar-item">
+                <label for="gnc" class="title-DataCar">Your car have gnc?</label>
+                <div class="answer-container">
+                    <input type="radio" name="gnc" id="yes" value="yes">
+                    <label for="yes" class="answers">Yes</label>
+                    <input type="radio" name="gnc" id="no" value="no">
+                    <label for="no" class="answers">No</label>
+                </div>
+            </div>
+            <div class="dataCar-item" id="gncPrice">
+            </div>     
+        </div>
+        <div class="block-information">
+            <p class="title-data">Data Person</p>
+            <div class="dataPerson-item">
+                <label for="names" class="title-DataPerson">Names</label>
+                <input type="text" class="input-form" id="names">
+            </div>
+            <div class="dataPerson-item">
+                <label for="surnames" class="title-DataPerson">Surnames</label>
+                <input type="text" class="input-form" id="surnames">
+            </div>
+            <div class="dataPerson-item">
+                <label for="birthDay" class="title-DataPerson">Birth Day</label>
+                <input type="date" class="input-form" id="birthDay">
+            </div>
+            <div class="dataPerson-item">
+                <label for="email" class="title-DataPerson">Email</label>
+                <input type="email" class="input-form" id="email">
+            </div>
+            <div class="dataPerson-item">
+                <label for="phoneNumber" class="title-DataPerson">Phone number</label>
+                <input type="text" class="input-form" id="phoneNumber">
+            </div>
+        </div>
+        <div class="quote-button-container">
+            <input id="quote" type="button" value="Quote">
+        </div>
+    </form>
+    <div class="block-information">
+        <p class="title-data">Data Quote</p>
+        <div class="dataQuote-div">
+            <p class="title-date" id="date"></p>
+            <p class="title-price" id="price"></p>
+        </div>
+    </div>
+    <script src="./quote.js"></script>
+</body>
+</html>

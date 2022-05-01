@@ -1,0 +1,312 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    font-size: 24px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    color: #FFF;
+    background-color: rgb(105, 92, 179);
+    width: 25%;
+    margin: auto;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-top: 10px;
+}
+
+nav .menu{
+    width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(105, 92, 179);
+    border-radius: 10px;
+}
+
+.menu div{
+    overflow: hidden;
+}
+
+.menu div a{
+    text-decoration: none;
+}
+
+.menu div a li{
+    color: #FFF;
+    padding: 5px 10px;
+    transition: all 1s ease;
+    list-style: none;
+}
+.menu li:hover{
+    background-color: rgb(77, 68, 131);
+    transform: scale(1.05);
+}
+
+.dataCar, .dataPerson, .dataPolicy{
+    width: 80%;
+    border: solid rgb(185, 185, 185) 1px;
+    margin-top: 10px;
+    margin-left: 100px;
+    background-color: rgb(228, 226, 226);
+}
+.titleCar, .titlePerson, .titlePolicy{
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    border-bottom-right-radius: 10px;
+    color: #FFF;
+}
+
+.titleCar{
+    background-color: rgb(182, 39, 39);
+}
+
+.titlePerson{
+    background-color: rgb(49, 192, 132);
+}
+.titlePolicy{
+    background-color: rgb(102, 117, 202);
+}
+
+h5 img{
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 10px
+}
+
+div p{
+    line-height: 20px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+/*** QUOTES ***/
+
+.block-information{
+    width: 95%;
+    margin: auto;
+    background-color: #F4F4F4;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.block-information:first-child{
+    margin-top: 20px;
+}
+
+.title-data{
+    font-family: Impact;
+    font-size: 3em;
+    line-height: 1.5em;
+    color: #2a2a2a;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+
+.chooseBrand-form, .chooseModel-form, .dataCar-form, .dataPerson-form, .dataQuote-div{
+    width: 100%;
+    padding: 20px;
+}
+
+.chooseBrand-container, .chooseModel-container{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 30px
+}
+
+.chooseBrand-container input, .chooseModel-container input {
+    display:none;
+}
+
+.title-chooseBrand, .title-chooseModel, .title-DataCar, .title-DataPerson, .title-date, .title-price{
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: #222;
+    margin-left: 40px;
+    line-height: 2em;
+}
+
+
+.chooseBrand-container #brandChoose1:checked ~ label[for="brandChoose1"]{
+    border: 1px solid #222;
+}
+.chooseBrand-container #brandChoose2:checked ~ label[for="brandChoose2"]{
+    border: 1px solid #222;
+}
+.chooseBrand-container #brandChoose3:checked ~ label[for="brandChoose3"]{
+    border: 1px solid #222;
+}
+.chooseBrand-container #brandChoose4:checked ~ label[for="brandChoose4"]{
+    border: 1px solid #222;
+}
+.chooseBrand-container #brandChoose5:checked ~ label[for="brandChoose5"]{
+    border: 1px solid #222;
+}
+
+.chooseModel-container #modelChoose1:checked ~ label[for="modelChoose1"]{
+    border: 1px solid #222;
+}
+.chooseModel-container #modelChoose2:checked ~ label[for="modelChoose2"]{
+    border: 1px solid #222;
+}
+.chooseModel-container #modelChoose3:checked ~ label[for="modelChoose3"]{
+    border: 1px solid #222;
+}
+.chooseModel-container #modelChoose4:checked ~ label[for="modelChoose4"]{
+    border: 1px solid #222;
+}
+.chooseModel-container #modelChoose5:checked ~ label[for="modelChoose5"]{
+    border: 1px solid #222;
+}
+
+.dataCar-item{
+    display: grid;
+    grid-template-columns: 400px 300px;
+    margin-bottom: 20px;
+}
+
+.dataPerson-item{
+    display: grid;
+    grid-template-columns: 250px 300px;
+}
+
+.input-form{
+    position: relative;
+    top: 10px;
+    height: 30px;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    margin-left: 30px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    background-color: #f2f2f2;
+    transition: all 1s ease;
+}
+
+#yearManufacture, #gncEquipament{
+    width: 80px; 
+    font-size: 1.5em;
+}
+
+#names ,#surnames{
+    width: 200px;
+}
+
+#birthDay{
+    width: 140px;
+}
+
+#email{
+    width: 300px;
+}
+
+#phoneNumber{
+    width: 150px;
+}
+
+.input-form:focus{
+    background-color: #fffee8;
+    transform: scale(1.05);
+}
+
+.dataCar-container, .dataPerson-item{
+    margin-top: 30px;
+}
+
+.answer-container{
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
+input[name="gnc"]{
+    display: none;
+}
+
+.answers{
+    font-size: 1.5em;
+    font-family: sans-serif;
+    margin-left: 30px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+#yes:checked ~ label[for="yes"]{ 
+    background-color: #08D85A;
+}
+
+#no:checked ~ label[for="no"]{ 
+    background-color: #FF0800;
+}
+
+.quote-button-container{
+    margin-bottom: 20px;
+}
+
+#quote{
+    padding: 5px 40px;
+    font-size: 3em;
+    font-family: Impact;
+    background-color: #FCE903;
+    color: #2a2a2a;
+    border: 3px solid #2a2a2a;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    transition: all 1s ease;
+}
+
+#quote:hover{
+    transform: scale(1.05);
+}
+
+#date::before{
+    content: 'Date: ';
+}
+
+#price::before{
+    content: 'Price: ';
+}
+
+/*** SIGN-IN ***/
+
+.sign-in-btn-container{
+    padding: 20px 0;
+}
+
+#sign-in-btn, #register-btn{
+    padding: 5px 40px;
+    font-size: 3em;
+    font-family: Impact;
+    background-color: #FFF;
+    color: #2a2a2a;
+    border: 3px solid #2a2a2a;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    transition: all 1s ease;
+}
+
+#sign-in-btn:hover, #register-btn:hover{
+    transform: scale(1.05);
+}
+
+.register{
+    margin-top: 10px;
+    margin-left: 240px;
+}
