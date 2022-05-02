@@ -198,11 +198,23 @@ buttonQuote.addEventListener('click',function (e){
   
   if( (car.year != '') && (!(Object.values(car).includes(undefined))) && (!(Object.values(person).includes(''))) && (car.gnc == 'yes'?document.getElementById("gncEquipament").value != undefined:true)){
     const policy = new Policy(car,person,new Date());
+
+    /************************** SPREAD **************************/
+
     const registeredPolicy = {...policy,
                               user: localStorage.getItem('registeredUsername') || ''}
-    swal({title: `${capitalizeTransform(registeredPolicy.user)} Quote`,
-          text: `Date: ${registeredPolicy.date}
-                Price: ${registeredPolicy.price}`,
+
+    /************************************************************/
+
+    /******************** DESESTRUCTURACIÓN *********************/
+
+    const {date, price, user: username} = registeredPolicy;
+
+    /************************************************************/
+
+    swal({title: `${capitalizeTransform(username)} Quote`,
+          text: `Date: ${date}
+                Price: ${price}`,
           icon: 'success'});
     document.getElementById("quote-form").reset();
     clearAnswer();

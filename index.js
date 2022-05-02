@@ -153,4 +153,3 @@ document.write(`<div class="dataCar">
                     <p class="textPolicy">${policy1.toString()}</p>
                 </div>
                 `);
-export{capitalizeTransform};
