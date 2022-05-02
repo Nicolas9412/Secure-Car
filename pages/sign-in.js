@@ -8,6 +8,7 @@ document.getElementById('sign-in-btn').addEventListener('click',function(e){
     usersListRecovered = usersListRecovered.map(user => JSON.parse(user)) || [];
     for (const user of usersListRecovered) {
         if(user.userName == username && user.password == password){
+            localStorage.setItem('registeredUsername',`${username}`);
             window.location.href = "./quote.html";
             return
         }

@@ -1,4 +1,3 @@
-
 /*** CLASSES ***/
 
 class Car{
@@ -118,6 +117,10 @@ function clearModels(){
                                 img.alt = ""})
 };
 
+function capitalizeTransform(words){
+  return words.charAt(0).toUpperCase() + words.slice(1);
+}
+
 /*** VARIABLES ***/
 
 const brands = { 
@@ -195,9 +198,11 @@ buttonQuote.addEventListener('click',function (e){
   
   if( (car.year != '') && (!(Object.values(car).includes(undefined))) && (!(Object.values(person).includes(''))) && (car.gnc == 'yes'?document.getElementById("gncEquipament").value != undefined:true)){
     const policy = new Policy(car,person,new Date());
-    swal({title: 'QUOTE',
-          text: `Date: ${policy.date}
-                Price: ${policy.price}`,
+    const registeredPolicy = {...policy,
+                              user: localStorage.getItem('registeredUsername') || ''}
+    swal({title: `${capitalizeTransform(registeredPolicy.user)} Quote`,
+          text: `Date: ${registeredPolicy.date}
+                Price: ${registeredPolicy.price}`,
           icon: 'success'});
     document.getElementById("quote-form").reset();
     clearAnswer();
