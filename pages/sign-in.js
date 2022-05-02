@@ -6,13 +6,14 @@ document.getElementById('sign-in-btn').addEventListener('click',function(e){
     let password = document.getElementById('password').value;
     usersListRecovered = JSON.parse(localStorage.getItem('userList')) || [];
     usersListRecovered = usersListRecovered.map(user => JSON.parse(user)) || [];
-    console.log(usersListRecovered);
     for (const user of usersListRecovered) {
-        if (user.userName == username && user.password == password) {
+        if(user.userName == username && user.password == password){
             window.location.href = "./quote.html";
-            return;
+            return
         }
     }
-    alert('Username and password incorrect');
+    swal({title: 'Error',
+         text:'Username and password incorrect',
+         icon:'error'});
     document.getElementById('sign-in-form').reset();
 })

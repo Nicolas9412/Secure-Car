@@ -180,7 +180,7 @@ buttonNoGnc.addEventListener('click',clearAnswer)
 
 const buttonQuote = document.getElementById("quote");
 buttonQuote.addEventListener('click',function (e){
-  e.preventDefault
+  e.preventDefault();
   const car = new Car();
   document.querySelectorAll(".chooseBrand-container input").forEach(input => input.checked == true? car.brand = input.value: "");
   document.querySelectorAll(".chooseModel-container input").forEach(input => input.checked == true? car.model = input.value: "");
@@ -195,15 +195,15 @@ buttonQuote.addEventListener('click',function (e){
   
   if( (car.year != '') && (!(Object.values(car).includes(undefined))) && (!(Object.values(person).includes(''))) && (car.gnc == 'yes'?document.getElementById("gncEquipament").value != undefined:true)){
     const policy = new Policy(car,person,new Date());
-    const dateQuote = document.getElementById("date");
-    const price = document.getElementById("price");
-    dateQuote.innerText = ` ${policy.date}`;
-    price.innerText = ` ${policy.price}`;
+    swal({title: 'QUOTE',
+          text: `Date: ${policy.date}
+                Price: ${policy.price}`,
+          icon: 'success'});
     document.getElementById("quote-form").reset();
     clearAnswer();
     clearModels();
   }
   else{
-    alert("Te faltan datos por rellenar");
+    swal({title: 'Warning', text:'You have missing data to fill in',icon:'warning'});
   }
 });

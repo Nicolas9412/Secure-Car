@@ -21,7 +21,16 @@ document.getElementById('register-btn').addEventListener('click',function(e){
     usersListRecovered = JSON.parse(localStorage.getItem('userList')) || [];
     usersListRecovered = usersListRecovered.map(user => JSON.parse(user)) || [];
     userNameList = usersListRecovered.map(user => user.userName) || [];
-    if((! userNameList.includes(username) || alert(answers[0])) && (password == confirmPassword || alert(answers[1])) && ((username != '' && password != '' && confirmPassword != '')||alert(answers[2]))){
+    ! userNameList.includes(username) || swal({title: 'Error',
+                                               text:answers[0],
+                                                icon:'error'});
+    password == confirmPassword || swal({title: 'Error',
+                                        text:answers[1],
+                                        icon:'error'});
+    (username != '' && password != '' && confirmPassword != '')|| swal({title: 'Error',
+                                                                        text:answers[1],
+                                                                        icon:'error'});
+    if(! userNameList.includes(username) && password == confirmPassword  && (username != '' && password != '' && confirmPassword != '')){
         let user = new User(username,password);
         usersList.push(JSON.stringify(user));
         localStorage.setItem('userList',JSON.stringify(usersList));
