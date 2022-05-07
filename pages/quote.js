@@ -175,7 +175,7 @@ for (const radio of radios) {
 const buttonYesGnc = document.getElementById("yes");
 buttonYesGnc.addEventListener('click',function(){
   document.getElementById('gncPrice').innerHTML += `<label for="gncEquipament" class="title-DataCar">How much your gnc equipament?</label>
-  <input type="number" class="input-form" id="gncEquipament">`;
+  <input type="number" name="gncPrice" class="input-form" id="gncEquipament">`;
 });
 
 const buttonNoGnc = document.getElementById("no");
@@ -211,6 +211,25 @@ buttonQuote.addEventListener('click',function (e){
     const {date, price, user: username} = registeredPolicy;
 
     /************************************************************/
+    
+    /** SEND MAIL **/
+
+    
+   buttonQuote.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_58hf8gv';
+
+   emailjs.sendForm(serviceID, templateID, document.getElementById("quote-form"))
+    .then(() => {
+      buttonQuote.value = 'Quote';
+      alert('Enviado correctamente!');
+    }, (err) => {
+      buttonQuote.value = 'Quote';
+      alert(JSON.stringify(err));
+    });
+
+    /**** ****/
 
     swal({title: `${capitalizeTransform(username)} Quote`,
           text: `Date: ${date}
@@ -224,3 +243,4 @@ buttonQuote.addEventListener('click',function (e){
     swal({title: 'Warning', text:'You have missing data to fill in',icon:'warning'});
   }
 });
+

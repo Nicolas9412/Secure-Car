@@ -49,7 +49,7 @@
             </div>
             <div class="dataCar-item">
                 <label for="yearManufacture" class="title-DataCar">Year of Manufacture</label>
-                <input type="number" class="input-form" id="yearManufacture">
+                <input type="number" name="yearManufacture" class="input-form" id="yearManufacture">
             </div>
             <div class="dataCar-item">
                 <label for="gnc" class="title-DataCar">Your car have gnc?</label>
@@ -67,29 +67,36 @@
             <p class="title-data">Data Person</p>
             <div class="dataPerson-item">
                 <label for="names" class="title-DataPerson">Names</label>
-                <input type="text" class="input-form" id="names">
+                <input type="text" name="names" class="input-form" id="names">
             </div>
             <div class="dataPerson-item">
                 <label for="surnames" class="title-DataPerson">Surnames</label>
-                <input type="text" class="input-form" id="surnames">
+                <input type="text" name="surnames" class="input-form" id="surnames">
             </div>
             <div class="dataPerson-item">
                 <label for="birthDay" class="title-DataPerson">Birth Day</label>
-                <input type="date" class="input-form" id="birthDay">
+                <input type="date" name="birthDay" class="input-form" id="birthDay">
             </div>
             <div class="dataPerson-item">
                 <label for="email" class="title-DataPerson">Email</label>
-                <input type="email" class="input-form" id="email">
+                <input type="email" name="email" class="input-form" id="email">
             </div>
             <div class="dataPerson-item">
                 <label for="phoneNumber" class="title-DataPerson">Phone number</label>
-                <input type="text" class="input-form" id="phoneNumber">
+                <input type="text" name="phoneNumber" class="input-form" id="phoneNumber">
             </div>
         </div>
         <div class="quote-button-container">
             <input id="quote" type="button" value="Quote">
         </div>
     </form>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('4ylWGOhrdan7IPttE')
+    </script>
+    
     <script type="module" src="./quote.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
