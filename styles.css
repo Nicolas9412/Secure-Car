@@ -283,6 +283,10 @@ input[name="gnc"]{
     content: 'Price: ';
 }
 
+.result-information{
+    display: none;
+}
+
 /*** SIGN-IN ***/
 
 .sign-in-btn-container{

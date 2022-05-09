@@ -212,9 +212,13 @@ buttonQuote.addEventListener('click',function (e){
 
     /************************************************************/
     
+    /** Load Price and Date of Policy in form **/
+
+    document.getElementById('pricePolicy').value = price;
+    document.getElementById('datePolicy').value = date;
+
     /** SEND MAIL **/
 
-    
    buttonQuote.value = 'Sending...';
 
    const serviceID = 'default_service';
